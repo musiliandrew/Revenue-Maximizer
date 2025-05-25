@@ -1,6 +1,5 @@
-from django.urls import path
-from engine.views import CustomerSegmentationView
+from django.urls import path, include
 
 urlpatterns = [
-    path('api/segmentation/', CustomerSegmentationView.as_view(), name='customer-segmentation'),
+    path('api/', include('engine.urls')),
 ]

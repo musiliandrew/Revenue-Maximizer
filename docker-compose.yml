@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/segmentation/"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -41,7 +41,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    command: ./wait-for-it.sh backend:8000 -- npm run dev
+    command: /bin/sh ./wait-for-it.sh backend:8000 npm run dev
     volumes:
       - ./frontend:/app
       - /app/node_modules

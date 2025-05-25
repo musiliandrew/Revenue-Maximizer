@@ -1,0 +1,71 @@
+.forex-simulator-page {
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(180deg, #003087 0%, #0041A8 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 2rem auto;
+  max-width: 100%;
+  color: #FFFFFF;
+  animation: fadeIn 0.5s ease-in;
+}
+
+h1, h2, h3 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin-bottom: 0.75rem;
+}
+
+.corridor-insight {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.chart-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  padding-left: 1.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.error {
+  color: #D32F2F;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .forex-simulator-page {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
