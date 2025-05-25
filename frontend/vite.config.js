@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://backend:8000',
+        target: 'https://revenue-maximizer-frontend.onrender.com',
         changeOrigin: true,
         secure: false,
       },

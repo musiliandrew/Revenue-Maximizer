@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-a4+rk!ci0mix=dvz&#hb6j5_&nad)3vc6%vl5+91$^7wrxl0uw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['https://revenue-maximizer-backend.onrender.com','backend', 'localhost', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -109,7 +109,10 @@ STATIC_URL = 'static/'
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+DEBUG = False
+
 CORS_ALLOWED_ORIGINS = [
+    "https://revenue-maximizer-frontend.onrender.com",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
