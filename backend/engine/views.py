@@ -1,5 +1,6 @@
 from django.db.models import Sum, Count
 from rest_framework.views import APIView
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Customer, SavingsAccount, CardTransaction, Loan
@@ -18,10 +19,14 @@ from django.db.utils import Error as dbError
 from datetime import timedelta
 
 # Define engine at module level
-DATABASE_URL = 'postgresql://postgres:2003@db:5432/revenue'
+DATABASE_URL = 'postgresql://revenue_maximizer_db_user:fNO9hsvh0loMBnwECf7TbVMwhxPj7kBD@dpg-d0pmn63e5dus73e0gtdg-a.oregon-postgres.render.com/revenue_maximizer_db'
 engine = create_engine(DATABASE_URL)
 
 logger = logging.getLogger(__name__)
+
+@api_view(['GET'])
+def health_check(request):
+    return Response({"status": "healthy"}, status=200)
 
 class CustomerSegmentationView(APIView):
     def get(self, request):

@@ -9,10 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-a4+rk!ci0mix=dvz&#hb6j5_&nad)3vc6%vl5+91$^7wrxl0uw'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = ['https://revenue-maximizer-backend.onrender.com','backend', 'localhost', '127.0.0.1']
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -104,12 +102,14 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files
-STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEBUG = False
+
+ALLOWED_HOSTS = ['revenue-maximizer-backend.onrender.com', 'localhost', '127.0.0.1', 'backend']
 
 CORS_ALLOWED_ORIGINS = [
     "https://revenue-maximizer-frontend.onrender.com",
