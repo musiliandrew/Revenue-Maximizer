@@ -7,7 +7,7 @@ const FeeOptimizationPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/fee-optimization/')
+    axios.get('/api/fee-optimization/')
       .then(response => setData(response.data))
       .catch(err => setError(err.message));
   }, []);

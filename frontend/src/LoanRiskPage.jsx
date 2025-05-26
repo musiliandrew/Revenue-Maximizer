@@ -14,7 +14,7 @@ const LoanRiskPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/loan-risk/');
+        const response = await axios.get('/api/loan-risk/');
         setData(response.data);
         setLoading(false);
       } catch {
