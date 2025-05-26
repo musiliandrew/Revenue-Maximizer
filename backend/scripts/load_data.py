@@ -3,10 +3,12 @@ from sqlalchemy import create_engine, text
 import os
 
 # Database connection
-engine = create_engine('postgresql://postgres:2003@db:5432/revenue')
+engine = create_engine('postgresql://revenue_maximizer_db_user:fNO9hsvh0loMBnwECf7TbVMwhxPj7kBD@dpg-d0pmn63e5dus73e0gtdg-a.oregon-postgres.render.com/revenue_maximizer_db')
+
 
 # Input directory
-input_dir = "/app/data"
+input_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+
 
 # Load CSVs
 customers_df = pd.read_csv(os.path.join(input_dir, "customers.csv"))
